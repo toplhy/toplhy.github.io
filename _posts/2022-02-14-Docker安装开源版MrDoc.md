@@ -7,6 +7,7 @@ tags: [docker, docker compose]
 ---
 本文记录使用docker-compose安装MrDoc的过程，默认已具备docker和docker-compose环境。
 1. 拉取MrDoc代码
+
 ```
 git clone https://gitee.com/zmister/MrDoc.git
 ```
@@ -28,6 +29,7 @@ mrdoc:
 ```
 
 3. 修改config.ini配置文件，修改为使用mysql数据库
+
 ```
 [database]
 #engine，指定数据库类型，接受sqlite、mysql、oracle、postgresql
@@ -44,10 +46,13 @@ host = xxx.xxx.xxx.xxx
 port = 3306
 ```
 4. 安装容器即可
+
 ```
 docker-compose up
 ```
 5. 访问地址
+
+
 ```
 http://xxx.xxx.xxx.xxx:10086
 ```
