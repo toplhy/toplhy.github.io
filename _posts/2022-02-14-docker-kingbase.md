@@ -7,6 +7,8 @@ tags: [docker, kingbase, 数据库]
 toc:  true
 ---
 
+记录使用docker-compose安装人大金仓kingbase数据库
+
 ### docker hub
 [kingbase](https://hub.docker.com/r/godmeowicesun/kingbase)
 
