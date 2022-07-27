@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Docker-compose安装Mysql
+title: Docker-compose安装Redis
 author: Toplhyi
 date: 2022-02-14 17:37 +0800
-tags: [docker, docker compose]
+tags: [docker, docker compose, redis]
 toc:  true
 ---
 
