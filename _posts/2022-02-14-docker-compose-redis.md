@@ -7,6 +7,8 @@ tags: [docker, docker compose, redis]
 toc:  true
 ---
 
+记录使用docker-compose安装redis
+
 ### docker-compose.yml
 ```
 version: '3'
