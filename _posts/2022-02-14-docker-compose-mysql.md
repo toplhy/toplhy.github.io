@@ -3,7 +3,7 @@ layout: post
 title: Docker-compose安装Mysql
 author: Toplhyi
 date: 2022-02-14 17:37 +0800
-tags: [docker, docker compose]
+tags: [docker, docker compose, mysql]
 toc:  true
 ---
 
