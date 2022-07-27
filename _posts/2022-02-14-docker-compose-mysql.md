@@ -7,7 +7,7 @@ tags: [docker, docker compose]
 toc:  true
 ---
 
-+ docker-compose.yml
+### docker-compose.yml
 
 ```
 version: '3'
@@ -28,7 +28,7 @@ mysql:
     - ./mysql/log:/var/log/mysql
 ```
 
-+ my.cnf
+### my.cnf
 
 ```
 #
