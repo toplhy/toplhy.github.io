@@ -7,6 +7,8 @@ tags: [docker, docker compose, nacos]
 toc:  true
 ---
 
+记录使用docker-compose安装nacos2.0.3版本
+
 ### docker-compose.yml
 ```
 version: '3'
