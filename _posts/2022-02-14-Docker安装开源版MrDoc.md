@@ -4,6 +4,7 @@ title: Docker-compose安装开源版MrDoc
 author: Toplhyi
 date: 2022-02-14 17:37 +0800
 tags: [docker, docker compose]
+toc:  true
 ---
 本文记录使用docker-compose安装MrDoc的过程，默认已具备docker和docker-compose环境。
 1. 拉取MrDoc代码
