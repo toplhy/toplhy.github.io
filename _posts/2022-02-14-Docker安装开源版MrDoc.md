@@ -11,6 +11,7 @@ tags: [docker, docker compose]
 git clone https://gitee.com/zmister/MrDoc.git
 ```
 2. 编写docker-compose.yml文件
+
 ```
 version: '3'
 services:
@@ -25,6 +26,7 @@ mrdoc:
  volumes:
    - ./MrDoc:/app/MrDoc # 前者是拉取的代码路径
 ```
+
 3. 修改config.ini配置文件，修改为使用mysql数据库
 ```
 [database]
