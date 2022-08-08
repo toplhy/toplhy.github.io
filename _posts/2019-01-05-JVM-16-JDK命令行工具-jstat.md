@@ -46,7 +46,7 @@ count：用于指定输出多少次记录
 
 1. ```jstat -class <vmid>``` 
 
-   ![jvm_16_1](/images/jvm_16_1.png)
+   ![jvm_16_1](/images/jvm/jvm_16_1.png)
 
    - Loaded : 已经装载的类的数量
    - Bytes : 装载类所占用的字节数
@@ -56,7 +56,7 @@ count：用于指定输出多少次记录
 
 2. ```jstat -compiler <vmid> ```
 
-   ![jvm_16_2](/images/jvm_16_2.png)
+   ![jvm_16_2](/images/jvm/jvm_16_2.png)
 
    - Compiled：编译任务执行数量
    - Failed：编译任务执行失败数量
@@ -67,7 +67,7 @@ count：用于指定输出多少次记录
 
 3. ```jstat -gc <vmid>```
 
-   ![jvm_16_3](/images/jvm_16_3.png)
+   ![jvm_16_3](/images/jvm/jvm_16_3.png)
 
    - S0C：年轻代中第一个survivor（幸存区）的容量 （字节）
 
@@ -101,7 +101,7 @@ count：用于指定输出多少次记录
 
 4. ```jstat -printcompilation <vmid>```
 
-   ![jvm_16_4](/images/jvm_16_4.png)
+   ![jvm_16_4](/images/jvm/jvm_16_4.png)
 
    - Compiled ：编译任务的数目
    - Size ：方法生成的字节码的大小
