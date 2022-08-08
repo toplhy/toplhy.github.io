@@ -1,0 +1,18 @@
+---
+layout: post
+title: 19.JDK命令行工具-jhat
+author: Toplhyi
+date: 2019-01-05 17:55 +0800
+tags: [JVM]
+toc:  false
+---
+
+## JDK命令行工具-jhat
+
+jhat用来分析jmap生成的堆转储快照，它内置了一个微型的HTTP/HTML服务器，生成dump文件的分析结果后可以在浏览器中查看。
+
+```jhat heapdump.dump <pid>```
+
+屏幕显示“Server is ready”的提示后，访问http://localhost:7000就可以看到分析结果。
+
+![jvm_19](/images/jvm_19.png)
