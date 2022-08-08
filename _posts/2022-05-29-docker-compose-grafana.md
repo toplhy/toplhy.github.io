@@ -2,7 +2,7 @@
 layout: post
 title: Docker-compose安装Grafana
 author: Toplhyi
-date: 2022-02-14 17:37 +0800
+date: 2022-05-29 17:37 +0800
 tags: [docker, docker compose, grafana]
 toc:  true
 ---
@@ -39,7 +39,7 @@ services:
       - ./grafana.ini:/etc/grafana/grafana.ini
 ```
 
-###
+### prometheus.yml
 ```
 global:
   scrape_interval: 10s
@@ -49,7 +49,7 @@ scrape_configs:
   - targets: ['service:9100'] # NOT localhost since we named the host of service in docker-compose file
 ```
 
-###
+### grafana.ini
 ```
 
 ```
