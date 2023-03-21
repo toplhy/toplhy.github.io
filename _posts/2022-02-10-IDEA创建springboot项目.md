@@ -9,7 +9,7 @@ toc:  true
 
 ### 1. IDEA创建maven项目
 
-![1](/images/grails/grails_1.png)
+![1](/images/java/springboot.png)
 
 ### 2. 加入springboot依赖
 
