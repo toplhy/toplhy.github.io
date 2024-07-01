@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:55:11 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>编写数据库设计文档的小技巧</title><link>https://toplhy.github.io/post/bian-xie-shu-ju-ku-she-ji-wen-dang-de-xiao-ji-qiao.html</link><description>编写数据库设计文档的小技巧&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:55:44 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>达梦8创建JAVA外部函数</title><link>https://toplhy.github.io/post/da-meng-8-chuang-jian-JAVA-wai-bu-han-shu.html</link><description>记录达梦数据库创建JAVA外部函数的过程&#13;
+&#13;
+### 开发java函数功能&#13;
+开发java函数功能，输出jar包&#13;
+&#13;
+### 将jar包安装到数据库&#13;
+按照文档中例子中再DM安装目录bin下创建external_jar目录，将jar包放入了进去。</description><guid isPermaLink="true">https://toplhy.github.io/post/da-meng-8-chuang-jian-JAVA-wai-bu-han-shu.html</guid><pubDate>Mon, 01 Jul 2024 10:55:20 +0000</pubDate></item><item><title>编写数据库设计文档的小技巧</title><link>https://toplhy.github.io/post/bian-xie-shu-ju-ku-she-ji-wen-dang-de-xiao-ji-qiao.html</link><description>编写数据库设计文档的小技巧&#13;
 &#13;
 ### mysql&#13;
 ```&#13;
