@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:59:18 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>MySQL语句建库建用户</title><link>https://toplhy.github.io/post/MySQL-yu-ju-jian-ku-jian-yong-hu.html</link><description>### 建库建表语句&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 11:00:02 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Oracle查询表的最后修改时间</title><link>https://toplhy.github.io/post/Oracle-cha-xun-biao-de-zui-hou-xiu-gai-shi-jian.html</link><description>## 查询表的最后修改时间&#13;
+```&#13;
+select uat.* from user_all_tables uat;&#13;
+&#13;
+select object_name, created,last_ddl_time from user_objects;&#13;
+&#13;
+select &#13;
+  uat.table_name as '表名',&#13;
+  (select wmsys.wm_concat(to_char(last_ddl_time, 'yyyy-MM-dd HH24:mi')||'、') from user_objects where object_name = uat.table_name ) as '最后修改日期' &#13;
+from user_all_tables uat &#13;
+where uat.tablespace_name = 'ZHIYE';&#13;
+```&#13;
+。</description><guid isPermaLink="true">https://toplhy.github.io/post/Oracle-cha-xun-biao-de-zui-hou-xiu-gai-shi-jian.html</guid><pubDate>Mon, 01 Jul 2024 10:59:42 +0000</pubDate></item><item><title>MySQL语句建库建用户</title><link>https://toplhy.github.io/post/MySQL-yu-ju-jian-ku-jian-yong-hu.html</link><description>### 建库建表语句&#13;
 &#13;
 ```&#13;
 create database tax_interview_test default character set utf8 collate utf8_general_ci;&#13;
