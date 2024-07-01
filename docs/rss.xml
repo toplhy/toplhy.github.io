@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:53:38 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Grails进行AOP切面</title><link>https://toplhy.github.io/post/Grails-jin-xing-AOP-qie-mian.html</link><description>记录在Grails3中使用AOP进行切面编程&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:54:03 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Grails上传文件大小限制修改</title><link>https://toplhy.github.io/post/Grails-shang-chuan-wen-jian-da-xiao-xian-zhi-xiu-gai.html</link><description>## grails3 文件上传大小限制修改&#13;
+&#13;
+上传文件时后台报错：&#13;
+```&#13;
+org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.lang.IllegalStateException: org.apache.tomcat.util.http.fileupload.FileUploadBase$SizeLimitExceededException&#13;
+```&#13;
+&#13;
+搜到的解决方案都是在启动类中注入Bean，如下：&#13;
+```&#13;
+@Bean&#13;
+public MultipartConfigElement multipartConfigElement() {&#13;
+    MultipartConfigFactory factory = new MultipartConfigFactory();&#13;
+    //  单个数据大小&#13;
+    factory.setMaxFileSize(MaxFileSize); // KB,MB&#13;
+    /// 总上传数据大小&#13;
+    factory.setMaxRequestSize(MaxRequestSize);&#13;
+    return factory.createMultipartConfig();&#13;
+}&#13;
+&#13;
+```&#13;
+配置之后测试无效。</description><guid isPermaLink="true">https://toplhy.github.io/post/Grails-shang-chuan-wen-jian-da-xiao-xian-zhi-xiu-gai.html</guid><pubDate>Mon, 01 Jul 2024 10:53:39 +0000</pubDate></item><item><title>Grails进行AOP切面</title><link>https://toplhy.github.io/post/Grails-jin-xing-AOP-qie-mian.html</link><description>记录在Grails3中使用AOP进行切面编程&#13;
 &#13;
 ### 1. build.gradle中加入依赖&#13;
 ```&#13;
