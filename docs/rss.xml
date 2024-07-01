@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 08:16:22 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】10.垃圾收集器1</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9110.-la-ji-shou-ji-qi-1.html</link><description>## 垃圾收集器1&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 08:20:47 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】10.垃圾收集器1</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9110.-la-ji-shou-ji-qi-1.html</link><description>## 垃圾收集器1&#13;
 &#13;
 ### Serial收集器&#13;
 &#13;
@@ -7,7 +7,11 @@
 &#13;
 ### 1. 枚举根节点&#13;
 &#13;
-   可作为GC Roots的节点主要在全局性引用（常量、类静态属性）和执行上下文（栈帧中的本地变量表）。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%919.-mei-ju-gen-jie-dian-%E3%80%81-an-quan-dian-%E3%80%81-an-quan-qu-yu.html</guid><pubDate>Mon, 01 Jul 2024 08:15:13 +0000</pubDate></item><item><title>【JVM】7.对象存活判定</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%917.-dui-xiang-cun-huo-pan-ding.html</link><description>## 对象存活判定&#13;
+   可作为GC Roots的节点主要在全局性引用（常量、类静态属性）和执行上下文（栈帧中的本地变量表）。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%919.-mei-ju-gen-jie-dian-%E3%80%81-an-quan-dian-%E3%80%81-an-quan-qu-yu.html</guid><pubDate>Mon, 01 Jul 2024 08:15:13 +0000</pubDate></item><item><title>【JVM】8.垃圾收集算法</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%918.-la-ji-shou-ji-suan-fa.html</link><description>## 垃圾收集算法&#13;
+&#13;
+### 1. 标记-清除算法&#13;
+&#13;
+   分为“标记”和“清除”两个阶段：首先标记出需要回收的对象，在标记完成后统一回收所有被标记的对象。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%918.-la-ji-shou-ji-suan-fa.html</guid><pubDate>Mon, 01 Jul 2024 08:14:41 +0000</pubDate></item><item><title>【JVM】7.对象存活判定</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%917.-dui-xiang-cun-huo-pan-ding.html</link><description>## 对象存活判定&#13;
 &#13;
 ![jvm_7](/images/jvm/jvm_7.png)&#13;
 &#13;
@@ -17,7 +21,18 @@ Java将引用分为强引用（Strong Reference）、软引用（Soft Reference�
 &#13;
 在进行垃圾回收之前，首先要确定对象是否已经引用。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%915.-jian-ce-dui-xiang-shi-fou-yi-jing-bei-yin-yong.html</guid><pubDate>Mon, 01 Jul 2024 08:08:11 +0000</pubDate></item><item><title>【JVM】4.对象的访问定位</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%914.-dui-xiang-de-fang-wen-ding-wei.html</link><description>## 对象的访问定位&#13;
 &#13;
-使用对象时Java程序通过栈上的reference数据来操作堆上的对象实例。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%914.-dui-xiang-de-fang-wen-ding-wei.html</guid><pubDate>Mon, 01 Jul 2024 08:07:39 +0000</pubDate></item><item><title>Grails自定义权限标签</title><link>https://toplhy.github.io/post/Grails-zi-ding-yi-quan-xian-biao-qian.html</link><description>grails项目中使用了spring security 插件实现身份认证。</description><guid isPermaLink="true">https://toplhy.github.io/post/Grails-zi-ding-yi-quan-xian-biao-qian.html</guid><pubDate>Mon, 01 Jul 2024 08:02:52 +0000</pubDate></item><item><title>Grails2.X开发调用WebService</title><link>https://toplhy.github.io/post/Grails2.X-kai-fa-diao-yong-WebService.html</link><description>## 开发webservice接口&#13;
+使用对象时Java程序通过栈上的reference数据来操作堆上的对象实例。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%914.-dui-xiang-de-fang-wen-ding-wei.html</guid><pubDate>Mon, 01 Jul 2024 08:07:39 +0000</pubDate></item><item><title>【JVM】3.对象的内存布局</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%913.-dui-xiang-de-nei-cun-bu-ju.html</link><description>## 对象的内存布局&#13;
+&#13;
+对象在内存中的布局分为3块区域：对象头、实例数据、对齐填充。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%913.-dui-xiang-de-nei-cun-bu-ju.html</guid><pubDate>Mon, 01 Jul 2024 08:05:52 +0000</pubDate></item><item><title>【JVM】 2.对象的创建过程</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%91%202.-dui-xiang-de-chuang-jian-guo-cheng.html</link><description>## 对象的创建过程&#13;
+&#13;
+![jvm_2](/images/jvm/jvm_2.png)&#13;
+&#13;
+&#13;
++ 为对象分配内存：指针碰撞、空闲列表。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%91%202.-dui-xiang-de-chuang-jian-guo-cheng.html</guid><pubDate>Mon, 01 Jul 2024 08:05:22 +0000</pubDate></item><item><title>【JVM】1.Java运行时内存区域划分</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%911.Java-yun-xing-shi-nei-cun-qu-yu-hua-fen.html</link><description>## Java运行时内存区域划分&#13;
+&#13;
+### 1.程序计数器：&#13;
+&#13;
+为线程私有，存储的是当前线程所执行程序的内存地址。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%911.Java-yun-xing-shi-nei-cun-qu-yu-hua-fen.html</guid><pubDate>Mon, 01 Jul 2024 08:04:42 +0000</pubDate></item><item><title>Grails自定义权限标签</title><link>https://toplhy.github.io/post/Grails-zi-ding-yi-quan-xian-biao-qian.html</link><description>grails项目中使用了spring security 插件实现身份认证。</description><guid isPermaLink="true">https://toplhy.github.io/post/Grails-zi-ding-yi-quan-xian-biao-qian.html</guid><pubDate>Mon, 01 Jul 2024 08:02:52 +0000</pubDate></item><item><title>Grails2.X开发调用WebService</title><link>https://toplhy.github.io/post/Grails2.X-kai-fa-diao-yong-WebService.html</link><description>## 开发webservice接口&#13;
 &#13;
 ### 1. 新建grails1/2工程项目&#13;
 &#13;
