@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:57:58 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>达梦慢sql查询及ET优化</title><link>https://toplhy.github.io/post/da-meng-man-sql-cha-xun-ji-ET-you-hua.html</link><description>达梦慢sql查询及ET优化&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:58:25 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>达梦修改最大会话连接数</title><link>https://toplhy.github.io/post/da-meng-xiu-gai-zui-da-hui-hua-lian-jie-shu.html</link><description>达梦修改最大会话连接数&#13;
+&#13;
+```&#13;
+SELECT SF_GET_PARA_VALUE(2,'MAX_SESSIONS');&#13;
+&#13;
+ALTER SYSTEM SET 'MAX_SESSIONS' =1000 spfile;&#13;
+```&#13;
+。</description><guid isPermaLink="true">https://toplhy.github.io/post/da-meng-xiu-gai-zui-da-hui-hua-lian-jie-shu.html</guid><pubDate>Mon, 01 Jul 2024 10:58:05 +0000</pubDate></item><item><title>达梦慢sql查询及ET优化</title><link>https://toplhy.github.io/post/da-meng-man-sql-cha-xun-ji-ET-you-hua.html</link><description>达梦慢sql查询及ET优化&#13;
 &#13;
 ### 达梦慢sql查询&#13;
 &#13;
