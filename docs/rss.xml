@@ -1,5 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:54:03 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Grails上传文件大小限制修改</title><link>https://toplhy.github.io/post/Grails-shang-chuan-wen-jian-da-xiao-xian-zhi-xiu-gai.html</link><description>## grails3 文件上传大小限制修改&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:54:29 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Grails4引用quartz插件报错问题</title><link>https://toplhy.github.io/post/Grails4-yin-yong-quartz-cha-jian-bao-cuo-wen-ti.html</link><description>Grails版本: 4.0.4&#13;
+&#13;
+项目中引入quartz插件：&#13;
+```&#13;
+compile 'org.grails.plugins:quartz:2.0.13'&#13;
+```&#13;
+启动报错：&#13;
+```&#13;
+Caused by: java.lang.NoClassDefFoundError: org/quartz/JobExecutionContext&#13;
+```&#13;
+解决：&#13;
+```&#13;
+compile('org.quartz-scheduler:quartz:2.2.3') {&#13;
+    exclude group: 'slf4j-api', module: 'c3p0'&#13;
+}&#13;
+compile ('org.grails.plugins:quartz:2.0.13')&#13;
+```&#13;
+参考[https://github.com/grails-plugins/grails-quartz/issues/107](https://github.com/grails-plugins/grails-quartz/issues/107)&#13;
+。</description><guid isPermaLink="true">https://toplhy.github.io/post/Grails4-yin-yong-quartz-cha-jian-bao-cuo-wen-ti.html</guid><pubDate>Mon, 01 Jul 2024 10:54:07 +0000</pubDate></item><item><title>Grails上传文件大小限制修改</title><link>https://toplhy.github.io/post/Grails-shang-chuan-wen-jian-da-xiao-xian-zhi-xiu-gai.html</link><description>## grails3 文件上传大小限制修改&#13;
 &#13;
 上传文件时后台报错：&#13;
 ```&#13;
