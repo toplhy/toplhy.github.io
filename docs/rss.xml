@@ -1,5 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:44:23 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】23.高性能硬件上的程序部署策略</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9123.-gao-xing-neng-ying-jian-shang-de-cheng-xu-bu-shu-ce-lve.html</link><description>## 高性能硬件上的程序部署策略&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:44:55 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】24.可能出现的故障</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9124.-ke-neng-chu-xian-de-gu-zhang.html</link><description>## 可能出现的故障&#13;
++ 集群间同步导致内存溢出&#13;
+&#13;
++ 堆外内存导致溢出错误&#13;
+&#13;
+  除了Java堆和永久代之外，下面这些区域还会闸弄较多的内存：&#13;
+&#13;
+  + Direct Memory：可通过-XX:MaxDirectMemorySize调整大小，内存不足时抛出OutOfMemoryError或者OutOfMemoryError：Direct buffer memory&#13;
+&#13;
+    垃圾收集进行时，虚拟机虽然会对Direct Memory进行回收，但是Direct Memory却不能像新生代、老年代那样，发现空间不足就通知收集器进行垃圾回收，它只能等待老年代满了后Full GC，然后顺便帮它清理掉内存中的废弃对象&#13;
+&#13;
+  + 线程堆栈：可通过-Xss调整大小，内存不足时抛出StackOverflowError或者OutOfMemoryError：unable  to create new native thread&#13;
+&#13;
+  + Socket缓存区：每个Socket连接都Receive和Send两个缓存区，分别占37KB和25KB内存，连接多的话这块内存占用也比较客观。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9124.-ke-neng-chu-xian-de-gu-zhang.html</guid><pubDate>Mon, 01 Jul 2024 10:44:34 +0000</pubDate></item><item><title>【JVM】23.高性能硬件上的程序部署策略</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9123.-gao-xing-neng-ying-jian-shang-de-cheng-xu-bu-shu-ce-lve.html</link><description>## 高性能硬件上的程序部署策略&#13;
 &#13;
 在高性能硬件上部署程序，目前有两种方式：&#13;
 &#13;
