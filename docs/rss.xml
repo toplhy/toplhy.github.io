@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:34:21 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】12.垃圾收集器3-G1收集器</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9112.-la-ji-shou-ji-qi-3-G1-shou-ji-qi.html</link><description>## 垃圾收集器3-G1收集器&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:38:35 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】13.GC日志和垃圾收集器参数总结</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9113.GC-ri-zhi-he-la-ji-shou-ji-qi-can-shu-zong-jie.html</link><description>## GC日志和垃圾收集器参数总结&#13;
+&#13;
++ GC日志&#13;
+&#13;
+  例：33.125:  [GC  [DefNew:  3324/k-&gt;152K(3712K),  0.0025925 secs]  3324K-&gt;152K(11904K), 0.0031680 secs]&#13;
+&#13;
+  例：100.667:  [Full GC  [Tenured:  0K-&gt;210K(10240K), 0.0149142  secs]  4603K-&gt;210K(19456K),  [Perm:  2999K-&gt;2999K(21248K), 0.0150007  secs]]  &#13;
+&#13;
+  + 33.125、 100.667：表示GC发生的时间，这数字指的是从虚拟机启动以来经过的秒数。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9113.GC-ri-zhi-he-la-ji-shou-ji-qi-can-shu-zong-jie.html</guid><pubDate>Mon, 01 Jul 2024 10:38:15 +0000</pubDate></item><item><title>【JVM】12.垃圾收集器3-G1收集器</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9112.-la-ji-shou-ji-qi-3-G1-shou-ji-qi.html</link><description>## 垃圾收集器3-G1收集器&#13;
 &#13;
 G1收集器是当今收集器技术发展最前沿的成果之一，与其他收集器相比，G1收集器具备一下特点：&#13;
 &#13;
