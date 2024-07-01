@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 11:11:56 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Docker-compose安装Portainer可视化工具</title><link>https://toplhy.github.io/post/Docker-compose-an-zhuang-Portainer-ke-shi-hua-gong-ju.html</link><description>记录使用docker-compose安装docker可视化管理工具portainer&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 11:12:31 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title> docker容器备份迁移</title><link>https://toplhy.github.io/post/%20docker-rong-qi-bei-fen-qian-yi.html</link><description>记录docker容器备份迁移的过程&#13;
+&#13;
+### 1.创建容器快照&#13;
+```&#13;
+docker commit -p f4ef8866aeaf kingbase-bak&#13;
+```&#13;
+&#13;
+### 2.tar包备份&#13;
+```&#13;
+docker save -o ~/kingbase-bak.tar kingbase-bak&#13;
+```&#13;
+&#13;
+### 3.恢复容器&#13;
+```&#13;
+docker load -i ~/kingbase-bak.tar&#13;
+```&#13;
+&#13;
+### 4.查看并运行&#13;
+```&#13;
+docker images&#13;
+docker run ...&#13;
+```&#13;
+。</description><guid isPermaLink="true">https://toplhy.github.io/post/%20docker-rong-qi-bei-fen-qian-yi.html</guid><pubDate>Mon, 01 Jul 2024 11:11:56 +0000</pubDate></item><item><title>Docker-compose安装Portainer可视化工具</title><link>https://toplhy.github.io/post/Docker-compose-an-zhuang-Portainer-ke-shi-hua-gong-ju.html</link><description>记录使用docker-compose安装docker可视化管理工具portainer&#13;
 &#13;
 ### docker-compose.yml&#13;
 ```&#13;
