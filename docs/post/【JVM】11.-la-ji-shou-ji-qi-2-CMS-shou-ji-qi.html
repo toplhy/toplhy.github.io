@@ -9,29 +9,11 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="---
-layout: post
-title: 
-author: Toplhyi
-date: 2019-01-05 17:47 +0800
-tags: [JVM]
-toc:  false
----
-
-## 垃圾收集器2-CMS收集器
+<meta name="description" content="## 垃圾收集器2-CMS收集器
 
 CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。">
 <meta property="og:title" content="【JVM】11.垃圾收集器2-CMS收集器">
-<meta property="og:description" content="---
-layout: post
-title: 
-author: Toplhyi
-date: 2019-01-05 17:47 +0800
-tags: [JVM]
-toc:  false
----
-
-## 垃圾收集器2-CMS收集器
+<meta property="og:description" content="## 垃圾收集器2-CMS收集器
 
 CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。">
 <meta property="og:type" content="article">
@@ -92,14 +74,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><hr>
-<h2>layout: post<br>
-title:<br>
-author: Toplhyi<br>
-date: 2019-01-05 17:47 +0800<br>
-tags: [JVM]<br>
-toc:  false</h2>
-<h2>垃圾收集器2-CMS收集器</h2>
+<div class="markdown-body" id="postBody"><h2>垃圾收集器2-CMS收集器</h2>
 <p>CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。<br>
 CMS收集器是基于标记-清除算法实现的，整个过程分为4个步骤，包括：</p>
 <ul>

@@ -1,14 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:32:10 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】11.垃圾收集器2-CMS收集器</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9111.-la-ji-shou-ji-qi-2-CMS-shou-ji-qi.html</link><description>---&#13;
-layout: post&#13;
-title: &#13;
-author: Toplhyi&#13;
-date: 2019-01-05 17:47 +0800&#13;
-tags: [JVM]&#13;
-toc:  false&#13;
----&#13;
-&#13;
-## 垃圾收集器2-CMS收集器&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:33:28 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】11.垃圾收集器2-CMS收集器</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9111.-la-ji-shou-ji-qi-2-CMS-shou-ji-qi.html</link><description>## 垃圾收集器2-CMS收集器&#13;
 &#13;
 CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。</description><guid isPermaLink="true">https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9111.-la-ji-shou-ji-qi-2-CMS-shou-ji-qi.html</guid><pubDate>Mon, 01 Jul 2024 10:31:45 +0000</pubDate></item><item><title>【JVM】10.垃圾收集器1</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9110.-la-ji-shou-ji-qi-1.html</link><description>## 垃圾收集器1&#13;
 &#13;

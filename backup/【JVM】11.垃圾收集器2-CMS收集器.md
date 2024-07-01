@@ -1,12 +1,3 @@
----
-layout: post
-title: 
-author: Toplhyi
-date: 2019-01-05 17:47 +0800
-tags: [JVM]
-toc:  false
----
-
 ## 垃圾收集器2-CMS收集器
 
 CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。
