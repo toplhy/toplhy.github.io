@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 11:01:24 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>powerdesign通过sql文件生成模型</title><link>https://toplhy.github.io/post/powerdesign-tong-guo-sql-wen-jian-sheng-cheng-mo-xing.html</link><description>记录使用powerdesign通过sql文件生成模型&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 11:02:48 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>IDEA远程调试代码</title><link>https://toplhy.github.io/post/IDEA-yuan-cheng-diao-shi-dai-ma.html</link><description>### 1. IDEA配置远程信息&#13;
+&#13;
+![1](/images/java/remote_1.png)&#13;
+&#13;
+### 2. 配置远程服务&#13;
+&#13;
++ 复制图1中的Command line arguments for remote JVM&#13;
+&#13;
+```&#13;
+-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#13;
+```&#13;
+&#13;
++ 在远程服务上添加第二步的参数&#13;
+&#13;
+此处以tomcat示例，编辑catalina.sh文件，添加参数。</description><guid isPermaLink="true">https://toplhy.github.io/post/IDEA-yuan-cheng-diao-shi-dai-ma.html</guid><pubDate>Mon, 01 Jul 2024 11:02:24 +0000</pubDate></item><item><title>powerdesign通过sql文件生成模型</title><link>https://toplhy.github.io/post/powerdesign-tong-guo-sql-wen-jian-sheng-cheng-mo-xing.html</link><description>记录使用powerdesign通过sql文件生成模型&#13;
 &#13;
 ### 选择Reverse Engineer&#13;
 File &gt; Reverse Engineer &gt; Database&#13;
