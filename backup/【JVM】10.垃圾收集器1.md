@@ -6,7 +6,7 @@
 
    运行示意图如下：
 
-   ![jvm_10_1](/images/jvm/jvm_10_1.png)
+   ![jvm_10_1](https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_1.png?raw=true)
    
 ### ParNew收集器
 
@@ -14,7 +14,7 @@
 
    运行示意图如下:
 
-   ![jvm_10_2](/images/jvm/jvm_10_2.png)
+   ![jvm_10_2](https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_2.png?raw=true)
 
    ParNew是除Serial外能与CMS收集器配合工作的收集器。
 
@@ -41,7 +41,7 @@
 
   运行示意图如下:
 
-  ![jvm_10_3](/images/jvm/jvm_10_3.png)
+  ![jvm_10_3](https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_3.png?raw=true)
 
 ### Parallel Old收集器
 
@@ -49,4 +49,4 @@
 
   运行示意图如下:
 
-  ![jvm_10_4](/images/jvm/jvm_10_4.png)
+  ![jvm_10_4](https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_4.png?raw=true)
