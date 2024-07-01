@@ -1,5 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:50:56 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>【JVM】34.类加载的过程</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9134.-lei-jia-zai-de-guo-cheng.html</link><description>## 类加载的过程&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Mon, 01 Jul 2024 10:52:32 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Linux防火墙开放端口</title><link>https://toplhy.github.io/post/Linux-fang-huo-qiang-kai-fang-duan-kou.html</link><description>```&#13;
+// 关闭防火墙&#13;
+systemctl stop firewalld.service&#13;
+// 开启防火墙&#13;
+systemctl start firewalld.service&#13;
+// 查看防火墙状态&#13;
+systemctl status firewalld.service&#13;
+//查看端口开放情况&#13;
+sudo firewall-cmd --list-all&#13;
+&#13;
+// 开放http 80端口&#13;
+sudo firewall-cmd --add-service=http --permanent&#13;
+sudo firewall-cmd --add-port=80/tcp --permanent&#13;
+//删除80端口&#13;
+sudo firewall-cmd --remove-port=80/tcp --permanent&#13;
+&#13;
+//重启防火墙&#13;
+sudo firewall-cmd --reload&#13;
+```&#13;
+。</description><guid isPermaLink="true">https://toplhy.github.io/post/Linux-fang-huo-qiang-kai-fang-duan-kou.html</guid><pubDate>Mon, 01 Jul 2024 10:52:09 +0000</pubDate></item><item><title>【JVM】34.类加载的过程</title><link>https://toplhy.github.io/post/%E3%80%90JVM%E3%80%9134.-lei-jia-zai-de-guo-cheng.html</link><description>## 类加载的过程&#13;
 &#13;
 ### 加载&#13;
 &#13;
