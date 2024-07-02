@@ -21,4 +21,4 @@ G1收集器的运作划分为以下步骤：
 
 运行示意图如下：
 
-![jvm_12](/images/jvm/jvm_12.png)
+![jvm_12](https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_12.png?raw=true)
