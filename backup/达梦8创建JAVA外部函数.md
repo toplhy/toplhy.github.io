@@ -45,6 +45,6 @@ select para_name,para_value,para_type from v$dm_ini where para_name = 'EXTERNAL_
 <b>解决：</b>将jar包放到了DMAgment目录/lib下
 
 #### 2. DMAgent的三种模式
-![DMAgent的三种模式](/images/database/2020-05-11-3.png)
+![DMAgent的三种模式](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/database/2020-05-11-3.png)
 
 使用后两种模式应该同时开启外部函数代理模式，但实际调用时无法连接到。telnet代理模式6363端口不通。
