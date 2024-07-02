@@ -11,7 +11,7 @@ CMS收集器是基于标记-清除算法实现的，整个过程分为4个步骤
 整个过程中耗时最长的并发标记和并发清除阶段收集器线程都可以与用户线程一起工作，所以总体来说，
 CMS收集器的内存回收过程是与用户线程一起并发执行的。收集器运行示意图如下：
 
-![jvm_11](/images/jvm/jvm_11.png)
+![jvm_11](https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_11.png?raw=true)
 
 CMS收集器的缺点：
 
