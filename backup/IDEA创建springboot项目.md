@@ -1,6 +1,6 @@
 ### 1. IDEA创建maven项目
 
-![1](/images/java/springboot.png)
+![1](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/java/springboot.png)
 
 ### 2. 加入springboot依赖
 

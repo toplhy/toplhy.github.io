@@ -4,7 +4,7 @@
 
 类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）和卸载（Unloading）7非阶段，其中验证、准备、解析3个部分统称为连接（Linking），如下图：
 
-![jvm_33](/images/jvm/jvm_33.png)
+![jvm_33](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_33.png)
 
 虚拟机规范严格规定了有且只有5种情况必须立即对类进行“初始化”：
 

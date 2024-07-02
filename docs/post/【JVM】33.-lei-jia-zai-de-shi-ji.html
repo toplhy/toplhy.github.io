@@ -77,7 +77,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><h2>类加载的时机</h2>
 <p>虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的Java类型，这就是Java的类加载机制。</p>
 <p>类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）和卸载（Unloading）7非阶段，其中验证、准备、解析3个部分统称为连接（Linking），如下图：</p>
-<p><a target="_blank" rel="noopener noreferrer" href="/images/jvm/jvm_33.png"><img src="/images/jvm/jvm_33.png" alt="jvm_33" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_33.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_33.png" alt="jvm_33" style="max-width: 100%;"></a></p>
 <p>虚拟机规范严格规定了有且只有5种情况必须立即对类进行“初始化”：</p>
 <ol>
 <li>遇到new、getstatic、putstatic或invokestatic这4条字节码指令时，如果类没有进行过初始化，则需要先触发其初始化。生成这4条指令最常见的Java代码场景是：使用new关键字实例化对象的时候、读取或设置一个类的静态字段的时候，以及调用一个类的静态方法的时候。</li>

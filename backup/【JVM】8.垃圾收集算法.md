@@ -8,7 +8,7 @@
 
    算法示意图如下：
 
-   ![jvm_8_1](/images/jvm/jvm_8_1.png)
+   ![jvm_8_1](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_1.png)
 
 ### 2. 复制收集算法
 
@@ -18,7 +18,7 @@
 
    算法示意图如下：
 
-   ![jvm_8_2](/images/jvm/jvm_8_2.png)
+   ![jvm_8_2](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_2.png)
 
    新生代中对象98%都是朝生夕死的，所以并不是1:1划分内存空间的，而是分为一块较大的Eden空间和两块较小的Survivor空间（From、To），每次使用Eden和其中一块Survivor空间（From）。进行回收时，将Eden和From Survivor中存活的对象都复制到To Survivor空间中，然后清理掉Eden和From Survivor空间，之后From和To会交换角色。Hotspot默认Eden和Survivor是8:1。如果另一块Survivor空间没有足够的内存存放存活的对象，这些对象将通过分配担保机制进入老年代。
 
@@ -28,7 +28,7 @@
 
    算法示意图如下：
 
-   ![jvm_8_3](/images/jvm/jvm_8_3.png)
+   ![jvm_8_3](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_3.png)
 
 ### 4. 分代收集算法
 
