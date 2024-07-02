@@ -1,6 +1,6 @@
 ## 对象的创建过程
 
-![jvm_2](/images/jvm/jvm_2.png)
+![jvm_2](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_2.png)
 
 
 + 为对象分配内存：指针碰撞、空闲列表。
