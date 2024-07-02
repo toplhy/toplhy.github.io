@@ -8,4 +8,4 @@ Class文件的魔数值为：0xCAFEBABE。
 
 Linux下使用vim或者hexedit查看class文件。
 
-![jvm_26](/images/jvm/jvm_26.png)
+![jvm_26](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_26.png)
