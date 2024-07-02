@@ -4,7 +4,7 @@
 File > Reverse Engineer > Database
 
 ### 选择sql文件
-![选择sql文件](/images/database/2020-05-11-1.png)
+![选择sql文件](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/database/2020-05-11-1.png)
 
 ### 执行脚本
 + 将name改为sql的注释, Tools > Execute Commands > Edit/Run Sricpt 执行以下脚本
