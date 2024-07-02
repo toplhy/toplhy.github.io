@@ -2,7 +2,7 @@
 
 jinfo的作用是实时的查看和调整虚拟机各项参数。
 
-![jvm_17](/images/jvm/jvm_17.png)
+![jvm_17](https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_17.png)
 
 用法：jinfo \[option] \<pid\>  
 
