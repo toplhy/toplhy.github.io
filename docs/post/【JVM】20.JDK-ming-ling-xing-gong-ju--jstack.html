@@ -78,7 +78,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>jstack命令用来生成虚拟机当前时刻的线程快照。线程快照就是当前虚拟机内每一条线程正在执行的方法堆栈的集合，生成线程快照的主要目的是定位线程穿线长时间停顿的原因，如线程间死锁、死循环、请求外部资源导致的长时间等待等都是导致线程长时间停顿的常见原因。</p>
 <p>命令格式： jstack  [ options ] &lt;pid&gt;</p>
 <p>jstack工具主要选项：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>选项</th>
@@ -99,7 +99,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>如果调用到本地方法的话，可以显示C/C++的堆栈</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>可以使用java.lang.Thread类的getAllStackTraces()方法获取虚拟机中所有线程的StackTraceElement对象。</p>
 <pre class="notranslate"><code class="notranslate">for(mapEntry&lt;Thread, StackTraceElement[]&gt; stackTrace: Thread.getAllStackTraces().entrySet()){
     Thread thread = (Thread)stackTrace.getKey();

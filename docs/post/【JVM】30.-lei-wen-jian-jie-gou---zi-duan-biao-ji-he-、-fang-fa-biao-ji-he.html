@@ -82,7 +82,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>字段表集合</h3>
 <p>字段表用于描述接口或类中声明的变量。字段包括类级变量以及实例级变量，但不包括在方法内部声明的局部变量。</p>
 <p>字段表的结构如下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>名称</th>
@@ -117,9 +117,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>attributes_count</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>access_flags可以设置的标志位和含义如下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>标志名称</th>
@@ -174,10 +174,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>字段是否enum</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>name_index和descriptor_index是对常量池的引用，分别代表着字段简单名称和方法的描述符。</p>
 <p>描述符含义如下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>标识字符</th>
@@ -226,13 +226,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>对象类型，如Ljava/lang/Object</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>对于数组类型，每一维度将使用一个前置的“[”字符来描述，如“[[Ljava/lang/String”记录了一个String[][]，“[I”记录了一个int[]。</p>
 <p>用描述符来描述方法时，按照先参数列表，后返回值的顺序描述，参数列表按照参数的严格顺序放在一组小括号之内。如void inc()的描述符是"()V"，int indexOf(char[] source,int sourceOffset, int sourceCount, char[] target, int targetOffset, int targetCount, int fromIndex)的描述符为“([CII[CIII)I”。</p>
 <p>最后是属性表集合用于存放一些额外的信息。</p>
 <h3>方法表集合</h3>
 <p>方法表的结构几乎和字段表一样</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>名称</th>
@@ -267,9 +267,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>attributes_count</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>方法访问标志见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>标志名称</th>
@@ -339,7 +339,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>方法是否由编译器自动产生的</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>方法里的Java代码经过编译器编译成字节码指令后，存放在方法属性表集合中一个名为Code的属性里面。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 

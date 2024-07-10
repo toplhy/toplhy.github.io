@@ -83,7 +83,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>jstat用于见识虚拟机各种运行状态信息的命令行工具。它可以显示本地或远程虚拟机进程中的类加载、内存、垃圾收集、JIT编译等运行数据。</p>
 <p>jstat命令格式：jstat -&lt;option&gt;  [-t] [-h&lt;lines&gt;] &lt;vmid&gt; [&lt;interval&gt; [&lt;count&gt;]]</p>
 <p>option代表着用户希望查询的虚拟机信息，主要分为3类：类加载、垃圾收集、运行期编译状况，具体有：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>选项</th>
@@ -140,7 +140,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>输出已经被JIT编译的方法</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>vmid：指虚拟机进程ID，</p>
 <p>-t：可以在打印的列加上Timestamp列，用于显示系统运行的时间</p>
 <p>-h：可以在周期性数据数据的时候，可以在指定输出多少行以后输出一次表头</p>

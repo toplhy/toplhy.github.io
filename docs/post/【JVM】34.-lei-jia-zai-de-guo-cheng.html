@@ -158,7 +158,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>准备</h3>
 <p>准备阶段是正式为类变量分配内存并设置类变量初始值的阶段，这些变量所使用的内存都将在方法去中进行分配（首先，这时候进行内存分配的仅包括类变量，而不包括实例变量，实例变量将会在对象实例化时随对象一起被分配在Java堆中。其次，这里说的初始值“通常情况”是数据类型的零值）。</p>
 <p>基本数据类型的零值如下：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>数据类型</th>
@@ -203,7 +203,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>null</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>如果类字段的字段属性表中存在ConstantValue属性，那么在准备阶段变狼就会被初始化为ConstantValue属性所指定的值。</p>
 <h3>解析</h3>
 <p>解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程。</p>

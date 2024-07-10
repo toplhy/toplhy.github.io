@@ -77,7 +77,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><h2>类文件结构-属性表集合</h2>
 <p>在Class文件、字段表】方法表都可以携带自己的属性表集合，以用于描述某些场景专有的信息。</p>
 <p>下表是Java虚拟机规范预定义的属性：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>属性名称</th>
@@ -187,9 +187,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>JDK1.7中新增的属性，用于保存invokedynamic指令引用的引导方法限定符</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>属性表的结构如下：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -214,12 +214,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>attribute_length</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <ul>
 <li>
 <p>Code属性</p>
 <p>Java程序方法体中的代码经过Javac编译器处理后，最终变为字节码指令存储在Code属性内。Code属性出现在方法表的属性集合中，但并非所有的方法表都必须存在这个属性，譬如接口或抽象类中的方法就不存在Code属性。Code属性的结构如下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -279,14 +279,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>attributes_count</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>attribute_name_index是一项指向CONSTANT_Utf8_info型常量的索引，常量值固定为“Code”</p>
 <p>attribute_length指示了属性值的长度</p>
 <p>max_stack代表了操作数栈深度的最大值</p>
 <p>max_locals代表了局部变量表所需的存储空间，单位是Slot</p>
 <p>code_length和code用来存储Java源程序编译后生的字节码指令。code_length代表字节码长度，code是用于存储字节码指令的一系列字节流</p>
 <p>字节码指令之后是这个方法的显式异常处理表集合，异常表结构如下：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -316,12 +316,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>Exceptions属性</p>
 <p>Exceptions属性的作用是列举出方法中可能抛出的受查异常，也就是方法描述时在throws关键字后面的异常。它的结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -351,12 +351,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>number_of_exceptions</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>LineNumberTable属性</p>
 <p>LineNumberTable属性用于描述Java源码行号与字节码行号之间的对应关系，它并不是运行时必需的属性。它的结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -386,9 +386,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>line_number_table_length</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>line_number_info的结构如下：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -408,12 +408,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>LocalVariableTable属性</p>
 <p>LocalVariableTable属性用于描述栈帧中局部变量表中的变量与Java源码中定义的变量之间的关系，它也不是运行时必需的属性。</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -443,9 +443,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>local_variable_table_length</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>local_variable_info的结构如下：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -480,12 +480,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>SourceFile属性</p>
 <p>SourceFile属性用于记录生成这个Class文件的源码文件名称，其表结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -510,12 +510,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>ConstantValue属性</p>
 <p>ConstantValue属性的作用是通知虚拟机自动为静态变量赋值。只有被static关键字修饰的变量才可以使用这项属性。它的表结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -540,12 +540,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>InnerClasses属性</p>
 <p>InnerClasses属性用于记录内部类与宿主类之间的关联。它的表结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -575,9 +575,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>number_of_classes</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>inner_classes_info的结构如下：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -607,13 +607,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>Deprecated和Synthetic属性</p>
 <p>Deprecated和Synthetic属性都属于标志类型的布尔属性，只存在有和没有的区别，没有属性值的概念。</p>
 <p>表结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -633,13 +633,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>attribute_length的值必须为0x00000000</p>
 </li>
 <li>
 <p>StrackMapTable属性</p>
 <p>StrackMapTable属性会在虚拟机类加载的字节码验证阶段被新类型检查验证器使用，目的在于替换以前比较消耗性能的基于数据流分析的类型推导验证器。表结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -669,12 +669,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>number_of_entries</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>Signature属性</p>
 <p>Signature属性用于支持泛型情况下的方法签名，它的结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -699,12 +699,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>1</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 <li>
 <p>BootstrapMethods属性</p>
 <p>BootstrapMethods属性用于保存invokedynamic指令引用的引导方法限定符，它的结构见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -734,9 +734,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>num_bootstrap_methods</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <p>bootstrap_method的属性见下表：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th>类型</th>
@@ -761,7 +761,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>num_bootstrap_arguments</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 </li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
