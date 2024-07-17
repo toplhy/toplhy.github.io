@@ -40,7 +40,7 @@ select * from pg_available_extensions where name = 'vector';
 ```
 create table test_vecotr(
     id bigserial primary key,
-    embedding vecotr(3)
+    embedding vector(3)
 );
 ```
 
@@ -51,7 +51,7 @@ alter table test add column embedding vector(3);
 
 + 插入向量数据
 ```
-insert into test_vecotr(embedding) values('[1,2,3]', '[4,5,6]','[10,13,15]');
+insert into test_vecotr(embedding) values('[1,2,3]'), ('[4,5,6]'),('[10,13,15]');
 ```
 
 + 更新向量数据
@@ -66,6 +66,7 @@ update test_vecotr set embedding = '[1,3,5]' where id = 1;
     <tr><td><#></td><td>负内积</td></tr>
     <tr><td><=></td><td>余弦距离</td></tr>
 </table>
+
 ```
 select * from test_vecotr order by embedding <-> '[1,4,5]' limit 5;
 select * from test_vecotr where embedding <-> '[1,4,5]' < 5;
