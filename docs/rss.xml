@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Wed, 17 Jul 2024 13:53:42 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Docker安装PFVector及简单使用</title><link>https://toplhy.github.io/post/Docker-an-zhuang-PFVector-ji-jian-dan-shi-yong.html</link><description>1. docker 安装 postgresql&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>Toplhyi的烂摊子</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Wed, 17 Jul 2024 13:54:19 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Docker安装PGVector及简单使用</title><link>https://toplhy.github.io/post/Docker-an-zhuang-PGVector-ji-jian-dan-shi-yong.html</link><description>1. docker 安装 postgresql&#13;
 ```&#13;
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=123456 --name postgres postgres:latest&#13;
 ```&#13;
@@ -76,7 +76,7 @@ select avg(embedding) from test_vecotr;&#13;
 &#13;
 9. 索引&#13;
 + HNSW索引&#13;
-HNSW索引创建了一个多层图。</description><guid isPermaLink="true">https://toplhy.github.io/post/Docker-an-zhuang-PFVector-ji-jian-dan-shi-yong.html</guid><pubDate>Wed, 17 Jul 2024 13:53:14 +0000</pubDate></item><item><title>CentOS离线安装elasticdump</title><link>https://toplhy.github.io/post/CentOS-li-xian-an-zhuang-elasticdump.html</link><description>1.  安装包准备&#13;
+HNSW索引创建了一个多层图。</description><guid isPermaLink="true">https://toplhy.github.io/post/Docker-an-zhuang-PGVector-ji-jian-dan-shi-yong.html</guid><pubDate>Wed, 17 Jul 2024 13:53:14 +0000</pubDate></item><item><title>CentOS离线安装elasticdump</title><link>https://toplhy.github.io/post/CentOS-li-xian-an-zhuang-elasticdump.html</link><description>1.  安装包准备&#13;
 ```&#13;
 1. 下载node&#13;
 wget https://nodejs.org/dist/v14.15.0/node-v14.15.0-linux-x64.tar.xz&#13;
