@@ -10,7 +10,17 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```sql
+<meta name="description" content="### 1. 查询模式下所有表
+
+```sql
+SELECT T.TABLE_NAME, C.COMMENTS
+FROM DBA_TABLES T
+LEFT JOIN ALL_TAB_COMMENTS C ON (C.OWNER = T.OWNER AND C.TABLE_NAME = T.TABLE_NAME)
+WHERE T.OWNER = '具体模式名'
+ORDER BY T.TABLE_NAME ASC;
+```
+### 2. 查询表字段设计
+```sql
 SELECT COL.COLUMN_NAME '字段名称',
        COL.DATA_TYPE '字段类型',
        COL.DATA_LENGTH '字段长度',
@@ -18,12 +28,37 @@ SELECT COL.COLUMN_NAME '字段名称',
        COM.COMMENTS '字段描述'
 FROM DBA_TAB_COLUMNS COL
 LEFT JOIN DBA_COL_COMMENTS COM ON (COM.OWNER = COL.OWNER AND COM.TABLE_NAME = COL.TABLE_NAME AND COM.COLUMN_NAME = COL.COLUMN_NAME)
-WHERE COL.OWNER = 'RICI_CLUE_FX_DEV'
-  AND COL.TABLE_NAME = 'YXWG_VLT_CANDIDATE';
-
+WHERE COL.OWNER = '具体模式名'
+  AND COL.TABLE_NAME = '具体表名';
+```
+### 3. 整体查询
+```sql
+SELECT T.TABLE_NAME '表名',
+       C.COMMENTS '表注释',
+       COL.COLUMN_NAME '字段名称',
+       COL.DATA_TYPE '字段类型',
+       COL.DATA_LENGTH '字段长度',
+       (CASE WHEN NULLABLE = 'N' THEN '否' ELSE '是' END) '是否为空',
+       COM.COMMENTS '字段描述'
+FROM DBA_TABLES T
+LEFT JOIN ALL_TAB_COMMENTS C ON (C.OWNER = T.OWNER AND C.TABLE_NAME = T.TABLE_NAME)
+LEFT JOIN DBA_TAB_COLUMNS COL ON (COL.OWNER = T.OWNER AND COL.TABLE_NAME = T.TABLE_NAME)
+LEFT JOIN DBA_COL_COMMENTS COM ON (COM.OWNER = COL.OWNER AND COM.TABLE_NAME = COL.TABLE_NAME AND COM.COLUMN_NAME = COL.COLUMN_NAME)
+WHERE T.OWNER = '具体模式名'
+ORDER BY T.TABLE_NAME ASC, COL.COLUMN_ID ASC;
 ```。">
 <meta property="og:title" content="达梦数据库获取表设计">
-<meta property="og:description" content="```sql
+<meta property="og:description" content="### 1. 查询模式下所有表
+
+```sql
+SELECT T.TABLE_NAME, C.COMMENTS
+FROM DBA_TABLES T
+LEFT JOIN ALL_TAB_COMMENTS C ON (C.OWNER = T.OWNER AND C.TABLE_NAME = T.TABLE_NAME)
+WHERE T.OWNER = '具体模式名'
+ORDER BY T.TABLE_NAME ASC;
+```
+### 2. 查询表字段设计
+```sql
 SELECT COL.COLUMN_NAME '字段名称',
        COL.DATA_TYPE '字段类型',
        COL.DATA_LENGTH '字段长度',
@@ -31,9 +66,24 @@ SELECT COL.COLUMN_NAME '字段名称',
        COM.COMMENTS '字段描述'
 FROM DBA_TAB_COLUMNS COL
 LEFT JOIN DBA_COL_COMMENTS COM ON (COM.OWNER = COL.OWNER AND COM.TABLE_NAME = COL.TABLE_NAME AND COM.COLUMN_NAME = COL.COLUMN_NAME)
-WHERE COL.OWNER = 'RICI_CLUE_FX_DEV'
-  AND COL.TABLE_NAME = 'YXWG_VLT_CANDIDATE';
-
+WHERE COL.OWNER = '具体模式名'
+  AND COL.TABLE_NAME = '具体表名';
+```
+### 3. 整体查询
+```sql
+SELECT T.TABLE_NAME '表名',
+       C.COMMENTS '表注释',
+       COL.COLUMN_NAME '字段名称',
+       COL.DATA_TYPE '字段类型',
+       COL.DATA_LENGTH '字段长度',
+       (CASE WHEN NULLABLE = 'N' THEN '否' ELSE '是' END) '是否为空',
+       COM.COMMENTS '字段描述'
+FROM DBA_TABLES T
+LEFT JOIN ALL_TAB_COMMENTS C ON (C.OWNER = T.OWNER AND C.TABLE_NAME = T.TABLE_NAME)
+LEFT JOIN DBA_TAB_COLUMNS COL ON (COL.OWNER = T.OWNER AND COL.TABLE_NAME = T.TABLE_NAME)
+LEFT JOIN DBA_COL_COMMENTS COM ON (COM.OWNER = COL.OWNER AND COM.TABLE_NAME = COL.TABLE_NAME AND COM.COLUMN_NAME = COL.COLUMN_NAME)
+WHERE T.OWNER = '具体模式名'
+ORDER BY T.TABLE_NAME ASC, COL.COLUMN_ID ASC;
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://toplhy.github.io/post/da-meng-shu-ju-ku-huo-qu-biao-she-ji.html">
@@ -105,16 +155,36 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">SELECT</span> <span class="pl-c1">COL</span>.<span class="pl-c1">COLUMN_NAME</span> <span class="pl-s"><span class="pl-pds">"</span>字段名称<span class="pl-pds">"</span></span>,
+<div class="markdown-body" id="postBody"><h3>1. 查询模式下所有表</h3>
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">SELECT</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span>, <span class="pl-c1">C</span>.<span class="pl-c1">COMMENTS</span>
+<span class="pl-k">FROM</span> DBA_TABLES T
+<span class="pl-k">LEFT JOIN</span> ALL_TAB_COMMENTS C <span class="pl-k">ON</span> (<span class="pl-c1">C</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-c1">T</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">AND</span> <span class="pl-c1">C</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span>)
+<span class="pl-k">WHERE</span> <span class="pl-c1">T</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>具体模式名<span class="pl-pds">'</span></span>
+<span class="pl-k">ORDER BY</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">ASC</span>;</pre></div>
+<h3>2. 查询表字段设计</h3>
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">SELECT</span> <span class="pl-c1">COL</span>.<span class="pl-c1">COLUMN_NAME</span> <span class="pl-s"><span class="pl-pds">"</span>字段名称<span class="pl-pds">"</span></span>,
        <span class="pl-c1">COL</span>.<span class="pl-c1">DATA_TYPE</span> <span class="pl-s"><span class="pl-pds">"</span>字段类型<span class="pl-pds">"</span></span>,
        <span class="pl-c1">COL</span>.<span class="pl-c1">DATA_LENGTH</span> <span class="pl-s"><span class="pl-pds">"</span>字段长度<span class="pl-pds">"</span></span>,
        (CASE WHEN NULLABLE <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>N<span class="pl-pds">'</span></span> THEN <span class="pl-s"><span class="pl-pds">'</span>否<span class="pl-pds">'</span></span> ELSE <span class="pl-s"><span class="pl-pds">'</span>是<span class="pl-pds">'</span></span> END) <span class="pl-s"><span class="pl-pds">"</span>是否为空<span class="pl-pds">"</span></span>,
        <span class="pl-c1">COM</span>.<span class="pl-c1">COMMENTS</span> <span class="pl-s"><span class="pl-pds">"</span>字段描述<span class="pl-pds">"</span></span>
 <span class="pl-k">FROM</span> DBA_TAB_COLUMNS COL
 <span class="pl-k">LEFT JOIN</span> DBA_COL_COMMENTS COM <span class="pl-k">ON</span> (<span class="pl-c1">COM</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-c1">COL</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">AND</span> <span class="pl-c1">COM</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">COL</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">AND</span> <span class="pl-c1">COM</span>.<span class="pl-c1">COLUMN_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">COL</span>.<span class="pl-c1">COLUMN_NAME</span>)
-<span class="pl-k">WHERE</span> <span class="pl-c1">COL</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>RICI_CLUE_FX_DEV<span class="pl-pds">'</span></span>
-  <span class="pl-k">AND</span> <span class="pl-c1">COL</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>YXWG_VLT_CANDIDATE<span class="pl-pds">'</span></span>;
-</pre></div></div>
+<span class="pl-k">WHERE</span> <span class="pl-c1">COL</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>具体模式名<span class="pl-pds">'</span></span>
+  <span class="pl-k">AND</span> <span class="pl-c1">COL</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>具体表名<span class="pl-pds">'</span></span>;</pre></div>
+<h3>3. 整体查询</h3>
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">SELECT</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-s"><span class="pl-pds">"</span>表名<span class="pl-pds">"</span></span>,
+       <span class="pl-c1">C</span>.<span class="pl-c1">COMMENTS</span> <span class="pl-s"><span class="pl-pds">"</span>表注释<span class="pl-pds">"</span></span>,
+       <span class="pl-c1">COL</span>.<span class="pl-c1">COLUMN_NAME</span> <span class="pl-s"><span class="pl-pds">"</span>字段名称<span class="pl-pds">"</span></span>,
+       <span class="pl-c1">COL</span>.<span class="pl-c1">DATA_TYPE</span> <span class="pl-s"><span class="pl-pds">"</span>字段类型<span class="pl-pds">"</span></span>,
+       <span class="pl-c1">COL</span>.<span class="pl-c1">DATA_LENGTH</span> <span class="pl-s"><span class="pl-pds">"</span>字段长度<span class="pl-pds">"</span></span>,
+       (CASE WHEN NULLABLE <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>N<span class="pl-pds">'</span></span> THEN <span class="pl-s"><span class="pl-pds">'</span>否<span class="pl-pds">'</span></span> ELSE <span class="pl-s"><span class="pl-pds">'</span>是<span class="pl-pds">'</span></span> END) <span class="pl-s"><span class="pl-pds">"</span>是否为空<span class="pl-pds">"</span></span>,
+       <span class="pl-c1">COM</span>.<span class="pl-c1">COMMENTS</span> <span class="pl-s"><span class="pl-pds">"</span>字段描述<span class="pl-pds">"</span></span>
+<span class="pl-k">FROM</span> DBA_TABLES T
+<span class="pl-k">LEFT JOIN</span> ALL_TAB_COMMENTS C <span class="pl-k">ON</span> (<span class="pl-c1">C</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-c1">T</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">AND</span> <span class="pl-c1">C</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span>)
+<span class="pl-k">LEFT JOIN</span> DBA_TAB_COLUMNS COL <span class="pl-k">ON</span> (<span class="pl-c1">COL</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-c1">T</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">AND</span> <span class="pl-c1">COL</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span>)
+<span class="pl-k">LEFT JOIN</span> DBA_COL_COMMENTS COM <span class="pl-k">ON</span> (<span class="pl-c1">COM</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-c1">COL</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">AND</span> <span class="pl-c1">COM</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">COL</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">AND</span> <span class="pl-c1">COM</span>.<span class="pl-c1">COLUMN_NAME</span> <span class="pl-k">=</span> <span class="pl-c1">COL</span>.<span class="pl-c1">COLUMN_NAME</span>)
+<span class="pl-k">WHERE</span> <span class="pl-c1">T</span>.<span class="pl-c1">OWNER</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>具体模式名<span class="pl-pds">'</span></span>
+<span class="pl-k">ORDER BY</span> <span class="pl-c1">T</span>.<span class="pl-c1">TABLE_NAME</span> <span class="pl-k">ASC</span>, <span class="pl-c1">COL</span>.<span class="pl-c1">COLUMN_ID</span> <span class="pl-k">ASC</span>;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
