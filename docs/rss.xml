@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>不曾深入苦海，哪来大彻大悟！</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Wed, 06 Nov 2024 01:28:49 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Python3创建虚拟环境</title><link>https://toplhy.github.io/post/Python3-chuang-jian-xu-ni-huan-jing.html</link><description>### 1. 创建环境&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>不曾深入苦海，哪来大彻大悟！</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Thu, 05 Jun 2025 09:53:37 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Docker将容器打包为镜像</title><link>https://toplhy.github.io/post/Docker-jiang-rong-qi-da-bao-wei-jing-xiang.html</link><description>1. 使用```commit```命令将容器打包为镜像，例如将容器cc打包为ccnew:2.0
+```docker
+docker commit cc ccnew:2.0
+```
+2.将镜像打包为tar格式，例如将ccnew:2.0镜像打包为ccnew.tar
+```
+docker save -o ccnew.tar ccnew:2.0
+```。</description><guid isPermaLink="true">https://toplhy.github.io/post/Docker-jiang-rong-qi-da-bao-wei-jing-xiang.html</guid><pubDate>Thu, 05 Jun 2025 09:48:19 +0000</pubDate></item><item><title>MacOS命令行操作鼠标键盘</title><link>https://toplhy.github.io/post/MacOS-ming-ling-xing-cao-zuo-shu-biao-jian-pan.html</link><description>#### 1. 安装```cliclick```工具&#13;
+cliclick 是一个 macos 的命令行工具，用于模拟鼠标和键盘事件。</description><guid isPermaLink="true">https://toplhy.github.io/post/MacOS-ming-ling-xing-cao-zuo-shu-biao-jian-pan.html</guid><pubDate>Wed, 08 Jan 2025 08:06:57 +0000</pubDate></item><item><title>Python3创建虚拟环境</title><link>https://toplhy.github.io/post/Python3-chuang-jian-xu-ni-huan-jing.html</link><description>### 1. 创建环境&#13;
 ```shell&#13;
 python3 -m venv envname&#13;
 ```&#13;

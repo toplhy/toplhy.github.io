@@ -10,49 +10,15 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="Grails版本: 4.0.4
-
-项目中引入quartz插件：
-```
-compile 'org.grails.plugins:quartz:2.0.13'
-```
-启动报错：
-```
-Caused by: java.lang.NoClassDefFoundError: org/quartz/JobExecutionContext
-```
-解决：
-```
-compile('org.quartz-scheduler:quartz:2.2.3') {
-    exclude group: 'slf4j-api', module: 'c3p0'
-}
-compile ('org.grails.plugins:quartz:2.0.13')
-```
-参考[https://github.com/grails-plugins/grails-quartz/issues/107](https://github.com/grails-plugins/grails-quartz/issues/107)
-。">
-<meta property="og:title" content="Grails4引用quartz插件报错问题">
-<meta property="og:description" content="Grails版本: 4.0.4
-
-项目中引入quartz插件：
-```
-compile 'org.grails.plugins:quartz:2.0.13'
-```
-启动报错：
-```
-Caused by: java.lang.NoClassDefFoundError: org/quartz/JobExecutionContext
-```
-解决：
-```
-compile('org.quartz-scheduler:quartz:2.2.3') {
-    exclude group: 'slf4j-api', module: 'c3p0'
-}
-compile ('org.grails.plugins:quartz:2.0.13')
-```
-参考[https://github.com/grails-plugins/grails-quartz/issues/107](https://github.com/grails-plugins/grails-quartz/issues/107)
-。">
+<meta name="description" content="#### 1. 安装```cliclick```工具
+cliclick 是一个 macos 的命令行工具，用于模拟鼠标和键盘事件。">
+<meta property="og:title" content="MacOS命令行操作鼠标键盘">
+<meta property="og:description" content="#### 1. 安装```cliclick```工具
+cliclick 是一个 macos 的命令行工具，用于模拟鼠标和键盘事件。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://toplhy.github.io/post/Grails4-yin-yong-quartz-cha-jian-bao-cuo-wen-ti.html">
+<meta property="og:url" content="https://toplhy.github.io/post/MacOS-ming-ling-xing-cao-zuo-shu-biao-jian-pan.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&v=4">
-<title>Grails4引用quartz插件报错问题</title>
+<title>MacOS命令行操作鼠标键盘</title>
 
 
 
@@ -95,7 +61,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">Grails4引用quartz插件报错问题</h1>
+<h1 class="postTitle">MacOS命令行操作鼠标键盘</h1>
 <div class="title-right">
     <a href="https://toplhy.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -103,7 +69,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/toplhy/toplhy.github.io/issues/42" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/toplhy/toplhy.github.io/issues/75" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -119,20 +85,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>Grails版本: 4.0.4</p>
-<p>项目中引入quartz插件：</p>
-<pre class="notranslate"><code class="notranslate">compile 'org.grails.plugins:quartz:2.0.13'
+<div class="markdown-body" id="postBody"><h4>1. 安装<code class="notranslate">cliclick</code>工具</h4>
+<p>cliclick 是一个 macos 的命令行工具，用于模拟鼠标和键盘事件。</p>
+<pre class="notranslate"><code class="notranslate">brew install cliclick
 </code></pre>
-<p>启动报错：</p>
-<pre class="notranslate"><code class="notranslate">Caused by: java.lang.NoClassDefFoundError: org/quartz/JobExecutionContext
-</code></pre>
-<p>解决：</p>
-<pre class="notranslate"><code class="notranslate">compile("org.quartz-scheduler:quartz:2.2.3") {
-    exclude group: 'slf4j-api', module: 'c3p0'
-}
-compile ('org.grails.plugins:quartz:2.0.13')
-</code></pre>
-<p>参考<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="429137981" data-permission-text="Title is private" data-url="https://github.com/apache/grails-quartz/issues/107" data-hovercard-type="issue" data-hovercard-url="/apache/grails-quartz/issues/107/hovercard" href="https://github.com/apache/grails-quartz/issues/107">apache/grails-quartz#107</a></p></div>
+<h4>2. 编写AppleScript脚本</h4>
+<pre class="notranslate"><code class="notranslate">-- 使用System Events模拟鼠标点击
+tell application "System Events"
+    -- 设置鼠标位置，这里的x和y需要根据实际游戏窗口中的位置调整
+    set mouseX to 500 -- 设置鼠标的x坐标
+    set mouseY to 300 -- 设置鼠标的y坐标
+
+    -- 移动鼠标到指定位置
+    do shell script "/usr/local/bin/cliclick m:" &amp; mouseX &amp; "," &amp; mouseY
+
+    -- 模拟鼠标点击
+    do shell script "/usr/local/bin/cliclick c:" &amp; mouseX &amp; "," &amp; mouseY
+end tell
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
