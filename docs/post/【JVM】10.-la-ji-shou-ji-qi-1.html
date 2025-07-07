@@ -85,11 +85,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>Serial收集器</h3>
 <p>Serial收集器是最基本、发展历史最悠久的收集器。它是一个单线程的收集器，使用复制算法。它在进行垃圾收集时，必须暂停其他所有的工作线程，直到它收集结束。</p>
 <p>运行示意图如下：</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_1.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_1.png?raw=true" alt="jvm_10_1" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_1.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_1.png?raw=true" alt="jvm_10_1" style="max-width: 100%;"></a></p>
 <h3>ParNew收集器</h3>
 <p>ParNew收集器是Serial收集器的多线程版本。</p>
 <p>运行示意图如下:</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_2.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_2.png?raw=true" alt="jvm_10_2" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_2.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_2.png?raw=true" alt="jvm_10_2" style="max-width: 100%;"></a></p>
 <p>ParNew是除Serial外能与CMS收集器配合工作的收集器。</p>
 <p>它默认开启线程数与CPU的数量相同，可以使用-XX:ParallelGCThreads参数来限制垃圾收集的线程数。</p>
 <p>Serial收集器在单CPU的环境比ParNew收集器效率更高。</p>
@@ -105,11 +105,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>Serial Old收集器</h3>
 <p>Serial Old收集器是Serial收集器的老年代版本，也是一个单线程收集器，使用标记-整理算法。</p>
 <p>运行示意图如下:</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_3.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_3.png?raw=true" alt="jvm_10_3" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_3.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_3.png?raw=true" alt="jvm_10_3" style="max-width: 100%;"></a></p>
 <h3>Parallel Old收集器</h3>
 <p>Parallel Old收集器是Parallel Scavenge收集器的老年代版本，使用多线程和标记-整理算法。在注重吞吐量以及CPU资源敏感的场合，可以优先考虑Parallel Scavenge加Parallel Old收集器。</p>
 <p>运行示意图如下:</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_4.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_4.png?raw=true" alt="jvm_10_4" style="max-width: 100%; height: auto;"></a></p></div>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_4.png?raw=true"><img src="https://github.com/toplhy/toplhy.github.io/blob/main/images/jvm/jvm_10_4.png?raw=true" alt="jvm_10_4" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

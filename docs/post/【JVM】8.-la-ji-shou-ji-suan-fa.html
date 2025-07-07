@@ -86,17 +86,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>分为“标记”和“清除”两个阶段：首先标记出需要回收的对象，在标记完成后统一回收所有被标记的对象。</p>
 <p>不足有两个：一个是效率问题，标记和清除的效率都不高；另一个是空间问题，标记清除之后会产生大量不连续的内存碎片，可能导致以后需要分配较大对象时无法找到足够的连续内存而不得不提前触发另一次垃圾收集动作。</p>
 <p>算法示意图如下：</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_1.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_1.png" alt="jvm_8_1" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_1.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_1.png" alt="jvm_8_1" style="max-width: 100%;"></a></p>
 <h3>2. 复制收集算法</h3>
 <p>它将可用户内存分为容量相等的两块，每次只使用其中一块。当这块的内存用完了，就将还存活的对象复制到另外一块上面，然后把已使用过的内存空间一次清理掉。</p>
 <p>好处是内存分配时不用考虑内存碎片等情况，只要移动堆顶指针，按顺序分配即可，实现简单，运行高效。代价是内存缩小为原来的一半。</p>
 <p>算法示意图如下：</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_2.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_2.png" alt="jvm_8_2" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_2.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_2.png" alt="jvm_8_2" style="max-width: 100%;"></a></p>
 <p>新生代中对象98%都是朝生夕死的，所以并不是1:1划分内存空间的，而是分为一块较大的Eden空间和两块较小的Survivor空间（From、To），每次使用Eden和其中一块Survivor空间（From）。进行回收时，将Eden和From Survivor中存活的对象都复制到To Survivor空间中，然后清理掉Eden和From Survivor空间，之后From和To会交换角色。Hotspot默认Eden和Survivor是8:1。如果另一块Survivor空间没有足够的内存存放存活的对象，这些对象将通过分配担保机制进入老年代。</p>
 <h3>3. 标记-整理算法</h3>
 <p>标记过程和“标记-清除”算法一样，但之后不是直接对可回收对象进行清理，而是让所存活的对象都向一端移动，然后直接清理掉边界以外的内存。</p>
 <p>算法示意图如下：</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_3.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_3.png" alt="jvm_8_3" style="max-width: 100%; height: auto;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_3.png"><img src="https://raw.githubusercontent.com/toplhy/toplhy.github.io/main/images/jvm/jvm_8_3.png" alt="jvm_8_3" style="max-width: 100%;"></a></p>
 <h3>4. 分代收集算法</h3>
 <p>根据各个年代的特点采用最适当的算法。一般把Java堆分为新生代和老年代。在新生代中，每次垃圾收集时都会有大批对象死去，只有少量存活，复制收集算法比较合适；而老年代中因为对象存活率高，没有额外空间对它进行分配担保，所以使用”标记-清除“或”标记-整理“算法进行回收。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
