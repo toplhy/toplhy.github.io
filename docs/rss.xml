@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>不曾深入苦海，哪来大彻大悟！</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Thu, 05 Jun 2025 09:53:37 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Docker将容器打包为镜像</title><link>https://toplhy.github.io/post/Docker-jiang-rong-qi-da-bao-wei-jing-xiang.html</link><description>1. 使用```commit```命令将容器打包为镜像，例如将容器cc打包为ccnew:2.0
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>不曾深入苦海，哪来大彻大悟！</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Fri, 10 Oct 2025 09:25:33 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Oracle创建模式</title><link>https://toplhy.github.io/post/Oracle-chuang-jian-mo-shi.html</link><description>1. 以管理员身份登录SQL*Plus
+```sqlplus / as sysdba ```
+2. 查看当前所有PDB
+```SHOW PDBS;```
+3. 切换到目标PDB
+```ALTER SESSION SET CONTAINER = ORCLPDB1;```
+4. 确认当前操作容器：
+```SHOW CON_NAME;```
+5. 创建表空间
+```CREATE TABLESPACE test_tablespace DATAFILE 'test_tablespace.dbf' SIZE 100M AUTOEXTEND ON NEXT 50M MAXSIZE UNLIMITED;```
+6. 创建用户并关联表空间
+```CREATE USER test_user IDENTIFIED BY test_pwd DEFAULT TABLESPACE test_tablespace TEMPORARY TABLESPACE temp;```
+7. 为用户授权
+```
+GRANT CREATE SESSION, RESOURCE TO test_user;
+ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
+```
+8. 验证与连接。</description><guid isPermaLink="true">https://toplhy.github.io/post/Oracle-chuang-jian-mo-shi.html</guid><pubDate>Fri, 10 Oct 2025 09:22:39 +0000</pubDate></item><item><title>Docker将容器打包为镜像</title><link>https://toplhy.github.io/post/Docker-jiang-rong-qi-da-bao-wei-jing-xiang.html</link><description>1. 使用```commit```命令将容器打包为镜像，例如将容器cc打包为ccnew:2.0
 ```docker
 docker commit cc ccnew:2.0
 ```
