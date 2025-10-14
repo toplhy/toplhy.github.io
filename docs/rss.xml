@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>不曾深入苦海，哪来大彻大悟！</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Fri, 10 Oct 2025 09:25:33 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Oracle创建模式</title><link>https://toplhy.github.io/post/Oracle-chuang-jian-mo-shi.html</link><description>1. 以管理员身份登录SQL*Plus
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Toplhyi</title><link>https://toplhy.github.io</link><description>不曾深入苦海，哪来大彻大悟！</description><copyright>Toplhyi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/29943772?u=0084e717806403fb39c9a97ca92b10c88e380c3d&amp;v=4</url><title>avatar</title><link>https://toplhy.github.io</link></image><lastBuildDate>Tue, 14 Oct 2025 06:04:52 +0000</lastBuildDate><managingEditor>Toplhyi</managingEditor><ttl>60</ttl><webMaster>Toplhyi</webMaster><item><title>Oracle创建模式</title><link>https://toplhy.github.io/post/Oracle-chuang-jian-mo-shi.html</link><description>1. 以管理员身份登录SQL*Plus
 ```sqlplus / as sysdba ```
 2. 查看当前所有PDB
 ```SHOW PDBS;```
@@ -14,6 +14,7 @@
 7. 为用户授权
 ```
 GRANT CREATE SESSION, RESOURCE TO test_user;
+GRANT CREATE VIEW TO test_user;
 ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
 ```
 8. 验证与连接。</description><guid isPermaLink="true">https://toplhy.github.io/post/Oracle-chuang-jian-mo-shi.html</guid><pubDate>Fri, 10 Oct 2025 09:22:39 +0000</pubDate></item><item><title>Docker将容器打包为镜像</title><link>https://toplhy.github.io/post/Docker-jiang-rong-qi-da-bao-wei-jing-xiang.html</link><description>1. 使用```commit```命令将容器打包为镜像，例如将容器cc打包为ccnew:2.0

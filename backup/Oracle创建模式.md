@@ -13,6 +13,7 @@
 7. 为用户授权
 ```
 GRANT CREATE SESSION, RESOURCE TO test_user;
+GRANT CREATE VIEW TO test_user;
 ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
 ```
 8. 验证与连接

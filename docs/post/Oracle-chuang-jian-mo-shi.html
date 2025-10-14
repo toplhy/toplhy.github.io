@@ -25,6 +25,7 @@
 7. 为用户授权
 ```
 GRANT CREATE SESSION, RESOURCE TO test_user;
+GRANT CREATE VIEW TO test_user;
 ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
 ```
 8. 验证与连接。">
@@ -44,6 +45,7 @@ ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
 7. 为用户授权
 ```
 GRANT CREATE SESSION, RESOURCE TO test_user;
+GRANT CREATE VIEW TO test_user;
 ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
 ```
 8. 验证与连接。">
@@ -133,6 +135,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>为用户授权</li>
 </ol>
 <pre class="notranslate"><code class="notranslate">GRANT CREATE SESSION, RESOURCE TO test_user;
+GRANT CREATE VIEW TO test_user;
 ALTER USER test_user QUOTA UNLIMITED ON test_tablespace;
 </code></pre>
 <ol start="8">
